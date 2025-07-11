@@ -22,10 +22,12 @@
   "dependencies": {
     "@nestjs/class-validator": "^0.13.4",
     "@nestjs/common": "^11.0.1",
+    "@nestjs/config": "^4.0.2",
     "@nestjs/core": "^11.0.1",
     "@nestjs/mapped-types": "*",
     "@nestjs/microservices": "^11.1.3",
     "@nestjs/platform-express": "^11.0.1",
+    "joi": "^17.13.3",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.1"
   },
@@ -73,7 +75,11 @@
     "coverageDirectory": "./coverage",
     "testEnvironment": "node",
     "roots": [
-      "<rootDir>/apps/"
-    ]
+      "<rootDir>/apps/",
+      "<rootDir>/libs/"
+    ],
+    "moduleNameMapper": {
+      "^@app/contract(|/.*)$": "<rootDir>/libs/contract/src/$1"
+    }
   }
 }

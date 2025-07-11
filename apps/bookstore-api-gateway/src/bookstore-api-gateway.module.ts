@@ -3,9 +3,10 @@ import { BookstoreApiGatewayController } from './bookstore-api-gateway.controlle
 import { BookstoreApiGatewayService } from './bookstore-api-gateway.service';
 import { UsersModule } from './users/users.module';
 import { BooksModule } from './books/books.module';
+import { ClientConfigModule } from './client-config/client-config.module';
 
 @Module({
-  imports: [UsersModule, BooksModule],
+  imports: [UsersModule, BooksModule, ClientConfigModule],
   controllers: [BookstoreApiGatewayController],
   providers: [BookstoreApiGatewayService],
 })

@@ -28,6 +28,15 @@
         "tsConfigPath": "apps/bookstore-api-gateway/tsconfig.app.json"
       }
     },
+    "contract": {
+      "type": "library",
+      "root": "libs/contract",
+      "entryFile": "index",
+      "sourceRoot": "libs/contract/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/contract/tsconfig.lib.json"
+      }
+    },
     "users": {
       "type": "application",
       "root": "apps/users",
